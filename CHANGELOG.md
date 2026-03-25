@@ -303,6 +303,10 @@
 
 ## `timers`
 
+### Version 0.4.0
+
+- Update MSRV to 1.82 (#505) by @martinfrances107
+
 ### Version "0.3.0"
 
 - Migrate to Edition 2021 and Apply MSRV in Cargo.toml (#360)
