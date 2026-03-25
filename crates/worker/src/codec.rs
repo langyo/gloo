@@ -24,7 +24,7 @@ impl Codec for Bincode {
     where
         I: Serialize,
     {
-        let buf = bincode::serialize(&input).expect("can't serialize an worker message");
+        let buf = bincode::serialize(&input).expect("can't serialize a worker message");
         Uint8Array::from(buf.as_slice()).into()
     }
 
@@ -33,6 +33,6 @@ impl Codec for Bincode {
         O: for<'de> Deserialize<'de>,
     {
         let data = Uint8Array::from(input).to_vec();
-        bincode::deserialize(&data).expect("can't deserialize an worker message")
+        bincode::deserialize(&data).expect("can't deserialize a worker message")
     }
 }
