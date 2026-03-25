@@ -179,12 +179,17 @@
 
 ## `net`
 
-### Version "0.7.0"
+### Version 0.7.0
 
-- Remove `Clone` implementation for `EventSource`.
-  Due to bug triggering unwanted behavior upon clone, when dropped instances would disconnect all others.
-  See Discussion (#409)
-  
+- Remove `Clone` implementation for `EventSource` (#417) by @vpochapuis
+  Cloning had a bug where dropping any clone would disconnect all instances.
+- Add `EventSourceBuilder` for configuring `EventSource` with credentials (#530) by @zn3x
+- Add `WebSocket::buffered_amount` (#510) by @vi
+- Add `PartialEq`, `Eq`, `Hash` derives to `CloseEvent` (#504) by @Alexi24601
+- Fix `RequestBuilder::build` producing a URL with an extra `&` (#497) by @hmacias-avaya
+- Fix WebSocket binary send panicking when `SharedArrayBuffer` is enabled (#502) by @Fedeparma74
+- Update MSRV to 1.82 (#505) by @martinfrances107
+- Bump `pin-project` to 1.1 and `http` to 1.4 (#536) by @Madoshakalaka
 
 ### Version "0.6.0"
 
