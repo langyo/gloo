@@ -94,6 +94,12 @@
 
 ## `file`
 
+### Version 0.4.0
+
+- Fix typo in doc comments (#440) by @qrilka
+- Update MSRV to 1.82 (#505) by @martinfrances107
+- Bump `web-sys` minimum to 0.3.91 (#536) by @Madoshakalaka
+
 ### Version "0.3.0"
 
 - Migrate to Edition 2021 and Apply MSRV in Cargo.toml (#360)
