@@ -336,6 +336,11 @@
 
 ## `utils`
 
+### Version 0.3.0
+
+- Fix `JsError::try_from` panicking on non-string-coercible `JsValue` inputs (#488) by @ranile
+- Update MSRV to 1.82, migrate dependencies to workspace versions (#505) by @martinfrances107
+
 ### Version "0.2.0"
 
 - Migrate to Edition 2021 and Apply MSRV in Cargo.toml (#360)

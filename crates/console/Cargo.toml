@@ -16,7 +16,7 @@ rust-version = { workspace = true }
 wasm-bindgen = { workspace = true }
 js-sys = { workspace = true }
 serde = { version = "1", features = ["derive"] }
-gloo-utils = { version = "0.2", path = "../utils", features = ["serde"] }
+gloo-utils = { version = "0.3", path = "../utils", features = ["serde"] }
 [dependencies.web-sys]
 version = "0.3"
 features = ["console", "Document"]
