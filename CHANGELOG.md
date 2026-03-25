@@ -376,6 +376,15 @@
 
 ## `worker`
 
+### Version 0.6.0
+
+- Add option to spawn workers as a module; default worker type is now ES module (#421) by @JonasAlaif
+  **BREAKING:** `spawn_with_loader()` removed, use `.with_loader(true).spawn(path)` instead.
+  **BREAKING:** default worker type changed from classic to module.
+- Fix broken docs link for `WorkerSpawner` (#487) by @ranile
+- Update MSRV to 1.82, migrate dependencies to workspace versions (#505) by @martinfrances107
+- Pin bincode to 1.3.3 for MSRV 1.82 compatibility (#536) by @Madoshakalaka
+
 ### Version 0.4.1
 
 - Remove Cloning on WorkerBridge (#388)
@@ -398,3 +407,14 @@
 
 - Worker v2 (#200)
 - Remove the private worker refcell (#223)
+
+## `worker-macros`
+
+### Version 0.2.0
+
+- Update MSRV to 1.82 via workspace inheritance (#505) by @martinfrances107
+- Bump `proc-macro-crate` to 3.x, pin for MSRV 1.82 compatibility (#505, #536) by @martinfrances107, @Madoshakalaka
+
+### Version 0.1.0
+
+- Initial release with `#[oneshot]` and `#[reactor]` procedural macros (#267)
