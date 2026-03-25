@@ -208,9 +208,16 @@ impl TryFrom<RequestBuilder> for Request {
         // absolute URL through creating a web_sys::Request object.
         let request = web_sys::Request::new_with_str(&value.url).map_err(js_to_error)?;
         let url = web_sys::Url::new(&request.url()).map_err(js_to_error)?;
-        let combined_query = match url.search().as_str() {
-            "" => value.query.to_string(),
-            _ => format!("{}&{}", url.search(), value.query),
+
+        let url_search = url.search();
+        let combined_query = if url_search.is_empty() {
+            value.query.to_string()
+        } else {
+            let mut query = value.query.to_string();
+            if !query.is_empty() {
+                query = format!("&{query}");
+            }
+            format!("{url_search}{query}")
         };
         url.set_search(&combined_query);
 

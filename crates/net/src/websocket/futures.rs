@@ -366,11 +366,24 @@ impl PinnedDrop for WebSocket {
 
 #[cfg(test)]
 mod tests {
+    use crate::http::Request;
+
     use super::*;
     use futures::{SinkExt, StreamExt};
     use wasm_bindgen_test::*;
 
     wasm_bindgen_test_configure!(run_in_browser);
+
+    #[wasm_bindgen_test]
+    async fn can_build_url_with_parameters_and_ampersand_is_not_added() {
+        let url = "http://something.com/get?param1=value1";
+        let request = Request::get(url).build().unwrap();
+        assert_eq!(
+            request.url(),
+            url,
+            "url of the built request should be equal to the parameter provided {url}"
+        );
+    }
 
     #[wasm_bindgen_test]
     async fn websocket_works() {
