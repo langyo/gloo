@@ -1,5 +1,9 @@
 ## `console`
 
+### Version 0.4.0
+
+- Update MSRV to 1.82 (#505) by @martinfrances107
+
 ### Version 0.3.0
 
 - Migrate to Edition 2021 and Apply MSRV in Cargo.toml (#360)
@@ -33,6 +37,10 @@
 
 ## `dialogs`
 
+### Version 0.3.0
+
+- Update MSRV to 1.82 (#505) by @martinfrances107
+
 ### Version "0.2.0"
 
 - Migrate to Edition 2021 and Apply MSRV in Cargo.toml (#360)
@@ -40,6 +48,11 @@
 ### Version "0.1.0"
 
 ## `events`
+
+### Version 0.3.0
+
+- Update MSRV to 1.82 (#505) by @martinfrances107
+- Bump `web-sys` minimum to 0.3.91 (#536) by @Madoshakalaka
 
 ### Version "0.2.0"
 
@@ -106,6 +119,11 @@
 - Fixing Cargo.toml for gloo-file
 
 ## `history`
+
+### Version 0.3.0
+
+- Update MSRV to 1.82 (#505) by @martinfrances107
+- Bump dependency versions (#536) by @Madoshakalaka
 
 ### Version 0.2.2
 
@@ -239,6 +257,10 @@
 
 ## `render`
 
+### Version 0.3.0
+
+- Update MSRV to 1.82 (#505) by @martinfrances107
+
 ### Version "0.2.0"
 
 - Migrate to Edition 2021 and Apply MSRV in Cargo.toml (#360)
@@ -246,6 +268,10 @@
 ### Version "0.1.0"
 
 ## `storage`
+
+### Version 0.4.0
+
+- Update MSRV to 1.82 (#505) by @martinfrances107
 
 ### Version "0.3.0"
 

@@ -17,7 +17,7 @@ features = ["futures"]
 [dependencies]
 wasm-bindgen = { workspace = true }
 js-sys = { workspace = true }
-gloo-events = { path = "../events", version = "0.2" }
+gloo-events = { path = "../events", version = "0.3" }
 mime = { version = "0.3.13", optional = true }
 futures-channel = { version = "0.3", optional = true }
 
