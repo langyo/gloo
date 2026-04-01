@@ -1,6 +1,6 @@
 ## `gloo`
 
-### Version 0.12.1
+### Version 0.13
 
 - Fix docs.rs build failure: remove `rustc-args` from docs.rs metadata and replace removed `doc_auto_cfg` feature with `doc_cfg`
 
@@ -135,6 +135,10 @@
 - Fixing Cargo.toml for gloo-file
 
 ## `gloo-history`
+
+### Version 0.4.0
+
+- **Breaking:** Serialize history state into `history.state` instead of in-memory map (#541) by @ranile
 
 ### Version 0.3.0
 
